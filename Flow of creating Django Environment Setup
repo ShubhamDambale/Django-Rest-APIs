@@ -158,4 +158,6 @@ Quit the server with CTRL-BREAK.
 Not Found: /favicon.ico
 [04/May/2023 12:41:56] "GET /favicon.ico HTTP/1.1" 404 2109
 
+======================================================================================================
 
+Then open the folder in VS Code
