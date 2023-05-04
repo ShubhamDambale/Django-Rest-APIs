@@ -1,0 +1,161 @@
+Go the folder and right click and selct windows powershell
+==========================================================
+
+PS E:\django.tut> python --version
+Python 3.11.3
+PS E:\django.tut> pip
+
+Usage:
+  pip <command> [options]
+
+Commands:
+  install                     Install packages.
+  download                    Download packages.
+  uninstall                   Uninstall packages.
+  freeze                      Output installed packages in requirements format.
+  inspect                     Inspect the python environment.
+  list                        List installed packages.
+  show                        Show information about installed packages.
+  check                       Verify installed packages have compatible dependencies.
+  config                      Manage local and global configuration.
+  search                      Search PyPI for packages.
+  cache                       Inspect and manage pip's wheel cache.
+  index                       Inspect information available from package indexes.
+  wheel                       Build wheels from your requirements.
+  hash                        Compute hashes of package archives.
+  completion                  A helper command used for command completion.
+  debug                       Show information useful for debugging.
+  help                        Show help for commands.
+
+General Options:
+  -h, --help                  Show help.
+  --debug                     Let unhandled exceptions propagate outside the main subroutine, instead of logging them
+                              to stderr.
+  --isolated                  Run pip in an isolated mode, ignoring environment variables and user configuration.
+  --require-virtualenv        Allow pip to only run in a virtual environment; exit with an error otherwise.
+  --python <python>           Run pip with the specified Python interpreter.
+  -v, --verbose               Give more output. Option is additive, and can be used up to 3 times.
+  -V, --version               Show version and exit.
+  -q, --quiet                 Give less output. Option is additive, and can be used up to 3 times (corresponding to
+                              WARNING, ERROR, and CRITICAL logging levels).
+  --log <path>                Path to a verbose appending log.
+  --no-input                  Disable prompting for input.
+  --proxy <proxy>             Specify a proxy in the form scheme://[user:passwd@]proxy.server:port.
+  --retries <retries>         Maximum number of retries each connection should attempt (default 5 times).
+  --timeout <sec>             Set the socket timeout (default 15 seconds).
+  --exists-action <action>    Default action when a path already exists: (s)witch, (i)gnore, (w)ipe, (b)ackup,
+                              (a)bort.
+  --trusted-host <hostname>   Mark this host or host:port pair as trusted, even though it does not have valid or any
+                              HTTPS.
+  --cert <path>               Path to PEM-encoded CA certificate bundle. If provided, overrides the default. See 'SSL
+                              Certificate Verification' in pip documentation for more information.
+  --client-cert <path>        Path to SSL client certificate, a single file containing the private key and the
+                              certificate in PEM format.
+  --cache-dir <dir>           Store the cache data in <dir>.
+  --no-cache-dir              Disable the cache.
+  --disable-pip-version-check
+                              Don't periodically check PyPI to determine whether a new version of pip is available for
+                              download. Implied with --no-index.
+  --no-color                  Suppress colored output.
+  --no-python-version-warning
+                              Silence deprecation warnings for upcoming unsupported Pythons.
+  --use-feature <feature>     Enable new functionality, that may be backward incompatible.
+  --use-deprecated <feature>  Enable deprecated functionality, that will be removed in the future.
+PS E:\django.tut> pip --version
+pip 22.3.1 from C:\Users\Shubham\AppData\Local\Programs\Python\Python311\Lib\site-packages\pip (python 3.11)
+PS E:\django.tut> pip install django
+Collecting django
+  Downloading Django-4.2-py3-none-any.whl (8.0 MB)
+     ---------------------------------------- 8.0/8.0 MB 5.7 MB/s eta 0:00:00
+Collecting asgiref<4,>=3.6.0
+  Downloading asgiref-3.6.0-py3-none-any.whl (23 kB)
+Collecting sqlparse>=0.3.1
+  Downloading sqlparse-0.4.4-py3-none-any.whl (41 kB)
+     ---------------------------------------- 41.2/41.2 kB 2.1 MB/s eta 0:00:00
+Collecting tzdata
+  Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
+     ---------------------------------------- 341.8/341.8 kB 5.3 MB/s eta 0:00:00
+Installing collected packages: tzdata, sqlparse, asgiref, django
+Successfully installed asgiref-3.6.0 django-4.2 sqlparse-0.4.4 tzdata-2023.3
+
+[notice] A new release of pip available: 22.3.1 -> 23.1.2
+[notice] To update, run: python.exe -m pip install --upgrade pip
+PS E:\django.tut> django-admin --version
+4.2
+PS E:\django.tut> django-admin
+
+Type 'django-admin help <subcommand>' for help on a specific subcommand.
+
+Available subcommands:
+
+[django]
+    check
+    compilemessages
+    createcachetable
+    dbshell
+    diffsettings
+    dumpdata
+    flush
+    inspectdb
+    loaddata
+    makemessages
+    makemigrations
+    migrate
+    optimizemigration
+    runserver
+    sendtestemail
+    shell
+    showmigrations
+    sqlflush
+    sqlmigrate
+    sqlsequencereset
+    squashmigrations
+    startapp
+    startproject
+    test
+    testserver
+Note that only Django core commands are listed as settings are not properly configured (error: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.).
+PS E:\django.tut> django-admin startproject myapp
+PS E:\django.tut> dir
+
+
+    Directory: E:\django.tut
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          5/4/2023  12:36 PM                myapp
+
+
+PS E:\django.tut> cd .\myapp\
+PS E:\django.tut\myapp> dir
+
+
+    Directory: E:\django.tut\myapp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----          5/4/2023  12:36 PM                myapp
+-a----          5/4/2023  12:36 PM            683 manage.py
+
+
+PS E:\django.tut\myapp> python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+May 04, 2023 - 12:39:01
+Django version 4.2, using settings 'myapp.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+
+[04/May/2023 12:41:55] "GET / HTTP/1.1" 200 10731
+[04/May/2023 12:41:55] "GET /static/admin/css/fonts.css HTTP/1.1" 404 1816
+Not Found: /favicon.ico
+[04/May/2023 12:41:56] "GET /favicon.ico HTTP/1.1" 404 2109
+
+
